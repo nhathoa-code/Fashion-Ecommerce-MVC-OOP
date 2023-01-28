@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+# Enable mod_rewrite
+RewriteEngine On
+# Specify the folder in which the application resides.
+# Use / if the application is in the root.
+RewriteBase /ecommerce
+RewriteCond %{THE_REQUEST} ^GET\ .*/index\.(php?|html?)\ HTTP
+RewriteRule ^(.*)index\.(php|html?)$ $1 [R=302,L]
+RewriteRule ^$ index.php [L]
+RewriteRule ^product/([A-Za-z0-9-_]*)$ index.php?page=single&slug=$1 [L]
+RewriteRule ^shopping-cart$ index.php?page=shopping-cart [L]
+RewriteRule ^checkout$ index.php?page=checkout [L]
+RewriteRule ^register$ index.php?page=register [L]
+RewriteRule ^forgot-password$ index.php?page=forgot-password [L]
+RewriteRule ^sign-in$ index.php?page=sign-in [L]
+RewriteRule ^sign-out$ index.php?page=sign-out [L]
+RewriteRule ^activate$ index.php?page=activate&%{QUERY_STRING} [NC,L]
+RewriteRule ^retrieve-password$ index.php?page=retrieve-password&%{QUERY_STRING} [NC,L]
+RewriteRule ^retrieve-success$ index.php?page=retrieve-success [L]
+RewriteRule ^search$ index.php?page=search&%{QUERY_STRING} [NC,L]
+RewriteRule ^account/order_history$ index.php?page=account/order_history [L]
+RewriteRule ^account/profile$ index.php?page=account/profile [L]
+RewriteRule ^account/change_pass$ index.php?page=account/change_pass [L]
+RewriteRule ^([a-z/-]*)$ index.php?page=shop&category=$1 [L]
+</IfModule>

@@ -1,0 +1,89 @@
+ul{
+    list-style-type: none;
+   
+}
+
+li{
+    margin: 0 !important;
+}
+
+label{
+    margin: 0 !important;
+}
+
+#product_category{
+    height: 210px;
+    overflow-y: auto;
+    padding-left: 10px;
+}
+
+#product_attribute ul{
+    margin-left: 20px !important;
+}
+
+
+
+  img {
+      width: 70px;
+      height: auto;
+  }
+
+  i {
+      cursor: pointer;
+      font-size: 25px;
+      display: none !important;
+  }
+
+  .gallery {
+      display: flex;
+  }
+
+  .image-container {
+      position: relative;
+  }
+
+  .image-container i {
+      position: absolute;
+      top: 0;
+      right: 0;
+  }
+
+  .image-container:hover i {
+      display: inline-block !important;
+  }
+
+  #container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+  }
+
+  #overlay {
+      position: fixed;
+      /* Sit on top of the page content */
+      display: none;
+      justify-content: center;
+       padding-top: 35vh; 
+      /* Hidden by default */
+      width: 100vw;
+      /* Full width (cover the whole page) */
+      height: 100vh;
+      /* Full height (cover the whole page) */
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      /* Black background with opacity */
+      z-index: 9999;
+      /* Specify a stack order in case you're using a different order for other elements */
+
+  }
+  #overlay img{
+    width: 100px;
+    height: auto;
+  }
+
+  .review i{
+    display: inline-block !important;
+    font-size:20px;
+  }
