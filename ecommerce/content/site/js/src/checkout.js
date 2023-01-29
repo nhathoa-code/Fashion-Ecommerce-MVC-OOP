@@ -1,39 +1,3 @@
-// let data;
-// let districts;
-// fetch("https://provinces.open-api.vn/api/?depth=3")
-//   .then((res) => res.json())
-//   .then((result) => {
-//     data = result;
-//     let tinh_thanh_output =
-//       "<option disabled selected value=''>Chọn Tỉnh/Thành</option>";
-//     data.forEach((item) => {
-//       tinh_thanh_output += `<option data-code=${item.code} value="${item.name}">${item.name}</option>`;
-//     });
-//     $(".tinh_thanh").html(tinh_thanh_output);
-//   });
-
-// $(".tinh_thanh").on("change", function () {
-//   let code = parseInt($("option:selected", this).data("code"));
-//   districts = data.find((item) => item.code === code).districts;
-//   let quan_huyen_output =
-//     "<option disabled selected value=''>Chọn Quận/Huyện</option>";
-//   districts.forEach((item) => {
-//     quan_huyen_output += `<option data-code=${item.code} value="${item.name}">${item.name}</option>`;
-//   });
-//   $(".quan_huyen").html(quan_huyen_output);
-// });
-
-// $(".quan_huyen").on("change", function () {
-//   let code = parseInt($("option:selected", this).data("code"));
-//   let wards = districts.find((item) => item.code === code).wards;
-//   let phuong_xa_output =
-//     "<option disabled selected value=''>Chọn Phường/Xã</option>";
-//   wards.forEach((item) => {
-//     phuong_xa_output += `<option value="${item.name}">${item.name}</option>`;
-//   });
-//   $(".phuong_xa").html(phuong_xa_output);
-// });
-
 let address;
 let data;
 let districts;
